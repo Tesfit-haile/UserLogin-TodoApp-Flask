@@ -12,12 +12,13 @@ app = my_app_created()
 bcrypt = Bcrypt(app)
 
 
-@login_required
 @myRoutes.route('/')
+@login_required
 def home():
     return render_template('/home.html')
 
 
+################################################################################################
 @myRoutes.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
@@ -47,10 +48,12 @@ def sign_up():
 
             print(User.show_all_user(newUser))
             flash('Registered successfully', category='success')
+            return redirect('/login')
 
     return render_template('sign_up.html')
 
 
+################################################################################################
 @myRoutes.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -71,8 +74,8 @@ def login():
     return render_template('login.html')
 
 
-@login_required
 @myRoutes.route('/logout')
+@login_required
 def logout():
     logout_user()
     return redirect('/login')

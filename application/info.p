@@ -27,3 +27,9 @@
 ### Step 11: Check if you can login 
 ### Step 12: do the authentication ( login_user, logout_user, current_user ) add restrictions to the routes
 ### step 13: to do the authentication first import flask-Manager and initiate it 
+>>>>>>>>>>>  Step 14: challenging at the LoginManager() during initialization .
+>>>>>>>>>>> during the authentication not necessary to pass the current_user through the routes
+>>>>>>>>>>> in order to say if current_user.is_authenticated: U can do it with out passing it.
+
+
+### step 15: 

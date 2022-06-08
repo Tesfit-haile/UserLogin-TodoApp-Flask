@@ -28,14 +28,14 @@ def my_app_created():
     createDataBase(app)
 
     ##################################### INITIATING LoginManager ##########################################
-    login_mgr = LoginManager()
-    login_mgr.login_view = 'myRoutes.login'
-    login_mgr.init_app(app)
+    login_manager = LoginManager()
+    login_manager.login_view = 'app.login'  # this was a challenge to understand
+    login_manager.init_app(app)
 
-    @login_mgr.user_loader
+    @login_manager.user_loader
     def load_user(id):
+        # same as filter_by but it will get by default the primary_key
         return User.query.get(int(id))
-
     return app
 
 
