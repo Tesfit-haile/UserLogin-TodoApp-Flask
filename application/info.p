@@ -1,4 +1,20 @@
 ################# Steps to follow #################################
+Important -> DO NOT FORGET TO HAVE ALL THE LINKS OF THE BOOTSTRAP
+IMPORTANT -> DO NOT FORGET TO UPDATE THE data-target="#exampleModal{{ todo.id }} at the button and  id="exampleModal{{ todo.id }} at the div body
+otherwise your update Modal wont work. it will only show you the same value pop up at the window....
+
+
+################################################################
+>>>>> When you are creating Modal then inside the Modal a form with an input, The button type must be Submit and the action should ...
+target your route...
+
+
+
+
+###############################################
+when you are building the model of database please becarful  with the __init__(self, )
+
+
 
 ### Step 1: create the project folder
 ### Step 2: create the templates, static, app.py
@@ -27,9 +43,11 @@
 ### Step 11: Check if you can login 
 ### Step 12: do the authentication ( login_user, logout_user, current_user ) add restrictions to the routes
 ### step 13: to do the authentication first import flask-Manager and initiate it 
+
 >>>>>>>>>>>  Step 14: challenging at the LoginManager() during initialization .
 >>>>>>>>>>> during the authentication not necessary to pass the current_user through the routes
->>>>>>>>>>> in order to say if current_user.is_authenticated: U can do it with out passing it.
+>>>>>>>>>>> in order to say if current_user.is_authenticated: U can do it with out passing the user through the routes
+>>>>> it will be recognize all over the application
 
 
 ### step 15: 

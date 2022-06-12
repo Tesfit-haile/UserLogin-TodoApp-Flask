@@ -24,7 +24,7 @@ def my_app_created():
     app.register_blueprint(myRoutes, url_prefix='/')
 
     ##################################### Creating DATABASE ##########################################
-    from .models import User
+    from .models import User, Todos
     createDataBase(app)
 
     ##################################### INITIATING LoginManager ##########################################
